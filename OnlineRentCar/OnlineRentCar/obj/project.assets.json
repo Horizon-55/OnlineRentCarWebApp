@@ -11553,11 +11553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\OnlineRentCar.csproj",
+      "projectUniqueName": "D:\\OnlineRentCarWebApp\\OnlineRentCar\\OnlineRentCar\\OnlineRentCar.csproj",
       "projectName": "OnlineRentCar",
-      "projectPath": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\OnlineRentCar.csproj",
+      "projectPath": "D:\\OnlineRentCarWebApp\\OnlineRentCar\\OnlineRentCar\\OnlineRentCar.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\obj\\",
+      "outputPath": "D:\\OnlineRentCarWebApp\\OnlineRentCar\\OnlineRentCar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

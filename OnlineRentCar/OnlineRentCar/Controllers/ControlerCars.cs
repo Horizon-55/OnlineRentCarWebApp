@@ -182,8 +182,6 @@ namespace OnlineRentCar.Controllers
                 return NotFound();
             }
             var CarsFromDb = _Database.cars.Find(LNumberTb); //находить елемент по конкретному ліцензійному номеру
-            //var CarsFromDbFirst = _Database.cars.FirstOrDefault(u => u.LNumberTb == LNumberTb); //находить 1 елемент по ліцензійному номеру!
-            //var CarsFromDbSingle = _Database.cars.SingleOrDefault(u => u.LNumberTb == LNumberTb); //находить 1 елемент по ліцензійному номеру!
             if (CarsFromDb == null)
                 return NotFound();
 
