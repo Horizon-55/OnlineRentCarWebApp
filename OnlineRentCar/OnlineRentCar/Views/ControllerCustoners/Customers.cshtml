@@ -1,0 +1,131 @@
+﻿@model User;
+@{
+    ViewData["Title"] = "Вкладка користувачі";
+    var GetData = (IEnumerable<User>)ViewData["FromObjCustomers"];
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Домашня сторінка</a>
+                    <a class="nav-link" asp-controller="ControlerCars" asp-action="Cars">Автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerCustoners" asp-action="Customers">Клієнти</a>
+                    <a class="nav-link" asp-controller="ControllerRents" asp-action="Rents">Оренда</a>
+                    <a class="nav-link" asp-controller="ControllerReturns" asp-action="Returns">Повернення</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <h3 class="text-danger pl-4">Додавання користувачів</h3>
+                        <img src="/img/customer.png" height="130px">
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form method="post">
+                            <div class="mb-3">
+                                <label for="FullNameCustomer" asp-for="Id" class="form-label">Id користувача</label>
+                                <input type="text" asp-for="Id" class="form-control" placeholder="Введіть Id користувача" style="width:500px">
+                                <span asp-validation-for="Id" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="FullNameCustomer" asp-for="СustomerFullNameTb" class="form-label">ПІБ користувача</label>
+                                <input type="text" asp-for="СustomerFullNameTb" class="form-control"  placeholder="Введіть Ім'я користувача" style="width:500px">
+                                <span asp-validation-for="СustomerFullNameTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="AddreessCustomer" asp-for="_AddreessTb" class="form-label">Адреса користувача</label>
+                                <input type="text" asp-for="_AddreessTb" class="form-control"  placeholder="Введіть Адресу користувача" style="width:500px">
+                                <span asp-validation-for="_AddreessTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="FullNumberPhone" asp-for="PhoneCustomerTb" class="form-label">Номер телефону користувача</label>
+                                <input type="text" asp-for="PhoneCustomerTb" class="form-control"  placeholder="Введіть Номер телефону користувача" style="width:500px">
+                                <span asp-validation-for="PhoneCustomerTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="CreateLoginCustomer" asp-for="CreateLoginTb" class="form-label">Створити логін користувача</label>
+                                <input type="text"asp-for="CreateLoginTb" class="form-control"  placeholder="Створіть логін користувача" style="width:500px">
+                                <span asp-validation-for="CreateLoginTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="CreatePasswordCustomer" asp-for="CreatePasswordTb" class="form-label">Створити Пароль користувача</label>
+                                <input type="text" asp-for="CreatePasswordTb" class="form-control"  placeholder="Створіть пароль користувача" style="width:500px">
+                                <span asp-validation-for="CreatePasswordTb" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-danger">Добавити</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                    <div class="col-md-8">
+                    <h1>Список користувачів</h1>
+                    <table class="table table-bordered table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Id користувача</th>
+                                    <th>ПІБ користувача</th>
+                                    <th>Адреса користувача</th>
+                                    <th>Номер телефону користувача</th>
+                                    <th>Логін користувача</th>
+                                    <th>Пароль користувача</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if(GetData != null)
+                                {
+                                    @foreach(var obj in GetData)
+                                    {    
+                                        <tr>    
+                                            <td width="30%">
+                                                <button type="button" class="btn btn-outline-warning">
+                                                    <a asp-controller="ControllerCustoners" asp-action="CustomersEdit" asp-route-id="@obj.Id" style="text-decoration:none">Редагувати</a>
+                                                </button>
+                                                <button type="button" class="btn btn-outline-danger">
+                                                    <a asp-controller="ControllerCustoners" asp-action="CustomersDelete" asp-route-id="@obj.Id" style="text-decoration:none">Вилучити</a>
+                                                </button>
+                                            </td>
+                                            <td width="30%">
+                                                @obj.Id
+                                            </td>
+                                            <td width="30%">
+                                                @obj.СustomerFullNameTb
+                                            </td>
+                                            <td width="30%">
+                                                @obj._AddreessTb
+                                            </td>
+                                            <td width="30%">
+                                                @obj.PhoneCustomerTb
+                                            </td>
+                                            <td width="30%">
+                                                @obj.CreateLoginTb
+                                            </td>
+                                            <td width="30%">
+                                                @obj.CreatePasswordTb
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>

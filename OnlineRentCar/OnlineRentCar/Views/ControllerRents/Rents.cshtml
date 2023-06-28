@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Оренда Автомобілей";
+    var RentListAll = (IEnumerable<Rent>)ViewData["CarsRentList"];
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Домашня сторінка</a>
+                    <a class="nav-link" asp-controller="ControlerCars" asp-action="Cars">Автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerCustoners" asp-action="Customers">Клієнти</a>
+                    <a class="nav-link" asp-controller="ControllerRents" asp-action="Rents">Оренда</a>
+                    <a class="nav-link" asp-controller="ControllerReturns" asp-action="Returns">Повернення</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-5">
+                        <h3 class="text-danger text-md-start">Орендовані автомобілі</h3>
+                        <img src="/img/car 128px.png" height="130px">
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-9">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Id Оренди Авто</th>
+                                    <th>Ліцензійні номера автомобіля</th>
+                                    <th>Клієнт</th>
+                                    <th>Дата взяття</th>
+                                    <th>Дата повернення</th>
+                                    <th>Оплата</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var obj in RentListAll)
+                                {
+                                    <tr>
+                                        <td width="30%">
+                                            <button type="button" class="btn btn-outline-warning">
+                                                <a asp-controller="ControllerRents" asp-action="SubmitRentReturns" asp-route-RentId="@obj.RentId" style="text-decoration:none">Повернути</a>
+                                            </button>
+                                        </td>
+                                        <td width="30%">
+                                            @obj.RentId;
+                                        </td>
+                                        <td width="30%">
+                                            @obj.Car
+                                        </td>
+                                        <td width="30%">
+                                            @obj.User
+                                        </td>
+                                        <td width="30%">
+                                            @obj.RentTime
+                                        </td>
+                                        <td width="30%">
+                                            @obj.ReturnDate
+                                        </td>
+                                        <td width="30%">
+                                            @obj.Fees
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

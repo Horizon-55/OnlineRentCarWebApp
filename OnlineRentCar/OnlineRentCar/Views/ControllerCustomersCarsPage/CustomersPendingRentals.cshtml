@@ -1,0 +1,73 @@
+﻿@model List<Rent>;
+@{
+    ViewData["Title"] = "Орендовані автомобілі";
+    var ClientName = ViewData["ClientName"];
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" asp-controller="ControllerCustomersCarsPage" asp-action="CustomersCarsPage" asp-route-data="@ClientName">Машини</a>
+                    <a class="nav-link" asp-controller="ControllerCustomersCarsPage" asp-action="CustomersPendingRentals" asp-route-Name="@ClientName">Орендовані автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h2>Ваші машини на розгляді</h2>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id Оренди</th>
+                            <th>Ліцензійні номера автомобіля</th>
+                            <th>Id Користувача</th>
+                            <th>Дата взяття</th>
+                            <th>Дата повернення</th>
+                            <th>Плата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var obj in Model)
+                        {
+                            <tr>
+                                <td width="30%">
+                                    @obj.RentId
+                                </td>
+                                <td width="30%">
+                                    @obj.Car
+                                </td>
+                                <td width="30%">
+                                    @obj.User
+                                </td>
+                                <td width="30%">
+                                    @obj.RentTime
+                                </td>
+                                <td width="30%">
+                                    @obj.ReturnDate
+                                </td>
+                                <td width="30%">
+                                    @obj.Fees
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>

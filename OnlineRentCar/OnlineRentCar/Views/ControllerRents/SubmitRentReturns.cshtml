@@ -1,0 +1,58 @@
+﻿@model Rent;
+@{
+    ViewData["Title"] = "Сторінка повернення авто";
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <form method="post" asp-action="DeleteRent">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">Повернення орендованого автомобіля</h2>
+                        <hr />
+                        <input asp-for="RentId" class="form-control" name="RentIdTb" hidden />
+                    </div>
+                    <div class="mb-3">
+                        <label for="BrandTb" asp-for="Car" class="form-label">Ліцензійний номер автомобіля</label>
+                        <input type="text" asp-for="Car" name="LNumberTb" readonly class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ModelTb" asp-for="User" class="form-label">Id номер користувача</label>
+                        <input type="text" readonly name="IdCustomer" asp-for="User" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ColorTb" asp-for="RentTime" class="form-label">Дата оренди</label>
+                        <input type="text" readonly name="RentTimeCust" asp-for="RentTime" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="NumberOfPassagers" asp-for="ReturnDate" class="form-label">Дата повернення</label>
+                        <input type="text" readonly name="ReturnTimeCust" asp-for="ReturnDate" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="Fees" class="form-label">Плата за авто</label>
+                        <input type="text" readonly name="FeesCustTb" asp-for="Fees" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="Fees" class="form-label">Кількість затримок під час оренди</label>
+                        <input type="text" class="form-control" name="DelayTb">
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="Fees" class="form-label">Плата за комісію</label>
+                        <input type="text" class="form-control" name="FineTb">
+                    </div>
+                    <button type="submit" class="btn btn-outline-danger">Оновити</button>
+                    <button type="button" class="btn btn-outline-info"><a asp-controller="ControllerRents" asp-action="Rents" style="text-decoration:none">Повернутися на головну</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+

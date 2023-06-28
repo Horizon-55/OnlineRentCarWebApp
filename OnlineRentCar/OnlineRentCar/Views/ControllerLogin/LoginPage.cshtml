@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Логін сторінка";
+}
+<head>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/LoginStyle.css" />
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="row mt-5">
+                        <div class="col"></div>
+                        <div class="col">
+                        <h3 class="text-warning">Онлайн оренда автомобілей</h3>
+                            <img src="/img/login2.png" height="300px" />
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <form method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1"  class="form-label">Логін</label>
+                                <input type="text" class="form-control" name="LoginUserAdmin" placeholder="Введіть свій логін" required="required">
+                                <div id="emailHelp" class="form-text">Нікому не говоріть свій логін та пароль</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                <input type="password" class="form-control" name="PasswordUserAdmin" id="exampleInputPassword1" placeholder="Ввведіть свій пароль" required="required">
+                                @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                                {
+                                    <div id="error-message" class="error-message">@ViewBag.ErrorMessage</div>
+                                }
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="form-check-input" name="SelectedRadio" value="ClientRadioBtn">
+                                <label class="form-check-label" for="exampleCheck1">Клієнт</label>
+                                <input type="radio" class="form-check-input" name="SelectedRadio" value="AdminRadioBtn">
+                                <label class="form-check-label" for="exampleCheck1">Адміністратор</label>
+                            </div>
+                            <br />
+                            <div class="form-group d-grid">
+                                <button type="submit" class="btn btn-warning btn-block">Вхід</button>
+                            </div>
+                    </form>
+                    </div>
+                    <div class="col-md-3"></div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,54 @@
+﻿@model User;
+@{
+    ViewData["Title"] = "Редагування користувачів";
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" >Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <form method="post" asp-action="CustomersEditPost">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">Редагування Користувачів</h2>
+                        <hr />
+                        <input type="text" asp-for="Id" class="form-control" hidden>
+                    </div>
+                    <div class="mb-3">
+                        <label for="FullNameCustomer" asp-for="СustomerFullNameTb" class="form-label">ПІБ користувача</label>
+                        <input type="text" asp-for="СustomerFullNameTb" class="form-control" placeholder="Введіть оновлене ім'я користувача">
+                        <span asp-validation-for="СustomerFullNameTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="AddreessCustomer" asp-for="_AddreessTb" class="form-label">Адреса користувача</label>
+                        <input type="text" asp-for="_AddreessTb" class="form-control" placeholder="Введіть оновлену адресу користувача">
+                        <span asp-validation-for="_AddreessTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="FullNumberPhone" asp-for="PhoneCustomerTb" class="form-label">Номер телефону користувача</label>
+                        <input type="text" asp-for="PhoneCustomerTb" class="form-control" placeholder="Введіть оновлений номер телефону користувача">
+                        <span asp-validation-for="PhoneCustomerTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="CreateLoginCustomer" asp-for="CreateLoginTb" class="form-label">Логін користувача</label>
+                        <input type="text" asp-for="CreateLoginTb" class="form-control" placeholder="Введіть оновлений логін користувача">
+                        <span asp-validation-for="CreateLoginTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="CreatePasswordCustomer" asp-for="CreatePasswordTb" class="form-label">Пароль користувача</label>
+                        <input type="text" asp-for="CreatePasswordTb" class="form-control" placeholder="Введіть оновлений пароль користувача">
+                        <span asp-validation-for="CreatePasswordTb" class="text-danger"></span>
+                    </div> 
+                    <button type="submit" class="btn btn-outline-primary">Оновити</button>
+                    <button type="button" class="btn btn-outline-info"><a asp-controller="ControllerCustoners" asp-action="Customers" style="text-decoration:none">Повернутися на головну</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

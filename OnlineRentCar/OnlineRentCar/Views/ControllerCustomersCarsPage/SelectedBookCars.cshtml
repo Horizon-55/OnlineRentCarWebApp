@@ -1,0 +1,111 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "Обранння автомобіля";
+    var GetData = ViewData["NameClient"];
+}
+<head>
+    <link rel="stylesheet" href="~/css/LoginStyle.css" />
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <form method="post">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">Обранння автомобіля</h2>
+                        <hr />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="LNumberTb">Ліцензіоннний номер</label>
+                        <input asp-for="LNumberTb" class="form-control" name="LNumberTb" placeholder="Введіть новий ліцензіонний номер" readonly />
+                    </div>
+                    <div class="mb-3">
+                        <label for="BrandTb" asp-for="BrandTb" class="form-label">Бренд</label>
+                        <input type="text" asp-for="BrandTb" class="form-control" name="BrandTb" placeholder="Введіть новий бренд автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ModelTb" asp-for="ModelTb" class="form-label">Модель</label>
+                        <input type="text" asp-for="ModelTb" class="form-control" name="ModelTb" placeholder="Введіть нову модель автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ColorTb" asp-for="ColorTb" class="form-label">Колір</label>
+                        <input type="text" asp-for="ColorTb" class="form-control" name="ColorTb" placeholder="Введіть новий колір автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="NumberOfPassagers" asp-for="NumberOfPassagerCarsTb" class="form-label">Кількість пасажирів</label>
+                        <input type="text" asp-for="NumberOfPassagerCarsTb" class="form-control" name="NumberOfPassager" placeholder="Введіть нове значення кількість пасажирів" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="TypeGearBoxTb" class="form-label">Тип коробки передач</label>
+                        <select class="form-select" asp-for="TypeGearBoxTb" name="TypeGearBoxTb" disabled>
+                            <option></option>
+                            <option>Механіка</option>
+                            <option>Автомат</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeOfFuel" asp-for="TypeOfFuelTb" class="form-label">Вид топлива</label>
+                        <select class="form-select" asp-for="TypeOfFuelTb" name="TypeOfFuelTb" disabled>
+                            <option></option>
+                            <option>Бензин</option>
+                            <option>Дизель</option>
+                            <option>Гибрид</option>
+                            <option>Електрика</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="EngineCapacity" asp-for="EngineCapalityTb" class="form-label">Об'єм двигуна</label>
+                        <input type="text" asp-for="EngineCapalityTb" class="form-control" name="EngineCapalityTb" placeholder="Введіть новий Об'єм двигуна автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Machinebodytype" asp-for="MachinebodyTypeTb" class="form-label">Тип машини</label>
+                        <input type="text" asp-for="MachinebodyTypeTb" class="form-control" name="MachinebodyTypeTb" placeholder="Введіть новий тип тип автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="GhostType" asp-for="GhostTypeTb" class="form-label">Тип привида</label>
+                        <input type="text" asp-for="GhostTypeTb" class="form-control" name="GhostTypeTb" placeholder="Введіть новий тип привида автомобіля" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PriceTb" asp-for="PriceTb" class="form-label">Ціна</label>
+                        <input type="text" asp-for="PriceTb" class="form-control" readonly name="PriceTb">
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label">Дата Взяття</label>
+                                <input type="date" class="form-control" id="DateRentBook" name="DateRentBook" />
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label class="form-label">Дата повернення</label>
+                                <input type="date" class="form-control" id="DateReturnBook" name="DateReturnBook" />
+                            </div>
+                            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                            {
+                                <div id="error-message" class="error-message">@ViewBag.ErrorMessage</div>
+                            }
+                        </div>
+                           <div class="col">
+                               <div class="row d-flex justify-content-center">
+                                <button type="submit" class="btn btn-outline-primary" style="width:60%" asp-route-data="@GetData">Забронювати</button>
+                                <button type="button" class="btn btn-outline-info" style="width:60%"><a asp-controller="ControllerCustomersCarsPage" asp-action="CustomersCarsPage" asp-route-data="@GetData" style="text-decoration:none">Повернутися на головну</a></button>
+                               </div>
+                           </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+

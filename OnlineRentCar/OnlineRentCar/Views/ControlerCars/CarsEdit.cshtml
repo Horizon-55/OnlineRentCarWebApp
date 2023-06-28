@@ -1,0 +1,101 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "EditСars";
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <form method="post">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">Редагування Автомобілей</h2>
+                        <hr />
+                        <input asp-for="LNumberTb" class="form-control" hidden/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="BrandTb" asp-for="BrandTb" class="form-label">Бренд</label>
+                        <input type="text" asp-for="BrandTb" class="form-control" name="BrandTb" placeholder="Введіть новий бренд автомобіля">
+                        <span asp-validation-for="BrandTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ModelTb" asp-for="ModelTb" class="form-label">Модель</label>
+                        <input type="text" asp-for="ModelTb" class="form-control" name="ModelTb" placeholder="Введіть нову модель автомобіля">
+                        <span asp-validation-for="ModelTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ColorTb" asp-for="ColorTb" class="form-label">Колір</label>
+                        <input type="text" asp-for="ColorTb" class="form-control" name="ColorTb" placeholder="Введіть новий колір автомобіля">
+                        <span asp-validation-for="ColorTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="NumberOfPassagers" asp-for="NumberOfPassagerCarsTb" class="form-label">Кількість пасажирів</label>
+                        <input type="text" asp-for="NumberOfPassagerCarsTb" class="form-control" name="NumberOfPassager" placeholder="Введіть нове значення кількість пасажирів">
+                        <span asp-validation-for="NumberOfPassagerCarsTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="TypeGearBoxTb" class="form-label">Тип коробки передач</label>
+                        <select class="form-select" asp-for="TypeGearBoxTb" name="TypeGearBoxTb">
+                            <option></option>
+                            <option>Механіка</option>
+                            <option>Автомат</option>
+                        </select>
+                        <span asp-validation-for="TypeGearBoxTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeOfFuel" asp-for="TypeOfFuelTb" class="form-label">Вид топлива</label>
+                        <select class="form-select" asp-for="TypeOfFuelTb" name="TypeOfFuelTb">
+                            <option></option>
+                            <option>Бензин</option>
+                            <option>Дизель</option>
+                            <option>Гибрид</option>
+                            <option>Електрика</option>
+                        </select>
+                        <span asp-validation-for="TypeOfFuelTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="EngineCapacity" asp-for="EngineCapalityTb" class="form-label">Об'єм двигуна</label>
+                        <input type="text" asp-for="EngineCapalityTb" class="form-control" name="EngineCapalityTb" placeholder="Введіть новий Об'єм двигуна автомобіля">
+                        <span asp-validation-for="EngineCapalityTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Machinebodytype" asp-for="MachinebodyTypeTb" class="form-label">Тип машини</label>
+                        <input type="text" asp-for="MachinebodyTypeTb" class="form-control" name="MachinebodyTypeTb" placeholder="Введіть новий тип тип автомобіля">
+                        <span asp-validation-for="MachinebodyTypeTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="GhostType" asp-for="GhostTypeTb" class="form-label">Тип привида</label>
+                        <input type="text" asp-for="GhostTypeTb" class="form-control" name="GhostTypeTb" placeholder="Введіть новий тип привида автомобіля">
+                        <span asp-validation-for="GhostTypeTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="StatusAuto" asp-for="StatusTb" class="form-label">Статус Автомобіля</label>
+                        <select class="form-select" asp-for="StatusTb" name="StatusTb">
+                            <option></option>
+                            <option>Доступний</option>
+                            <option>Заброньований</option>
+                        </select>
+                        <span asp-validation-for="StatusTb" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PriceTb" asp-for="PriceTb" class="form-label">Ціна</label>
+                        <input type="text" asp-for="PriceTb" class="form-control" name="PriceTb" placeholder="Введіть нову ціну">
+                        <span asp-validation-for="PriceTb" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Оновити</button>
+                    <button type="button" class="btn btn-outline-info"><a asp-controller="ControlerCars" asp-action="Cars" style="text-decoration:none">Повернутися на головну</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+

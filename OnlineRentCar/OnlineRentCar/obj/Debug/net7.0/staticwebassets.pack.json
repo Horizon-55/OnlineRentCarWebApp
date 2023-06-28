@@ -1,0 +1,321 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\css\\LoginStyle.css",
+      "PackagePath": "staticwebassets\\css\\LoginStyle.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\AudiA8Select3.jpg",
+      "PackagePath": "staticwebassets\\img\\AudiA8Select3.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\Login1.png",
+      "PackagePath": "staticwebassets\\img\\Login1.png"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\MitsubishiOutlanderSelect7.jpg",
+      "PackagePath": "staticwebassets\\img\\MitsubishiOutlanderSelect7.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\Porsche911select2.jpg",
+      "PackagePath": "staticwebassets\\img\\Porsche911select2.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\SeatIbizaSelect5.jpg",
+      "PackagePath": "staticwebassets\\img\\SeatIbizaSelect5.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\SkodaOctaviaA8Select4.jpg",
+      "PackagePath": "staticwebassets\\img\\SkodaOctaviaA8Select4.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\ToyotaCorollaSelect8.jpg",
+      "PackagePath": "staticwebassets\\img\\ToyotaCorollaSelect8.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\VWPassat1.jpg",
+      "PackagePath": "staticwebassets\\img\\VWPassat1.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\VolvoV40Select6.jpg",
+      "PackagePath": "staticwebassets\\img\\VolvoV40Select6.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\car 128px.png",
+      "PackagePath": "staticwebassets\\img\\car 128px.png"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\car.jpg",
+      "PackagePath": "staticwebassets\\img\\car.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\car.png",
+      "PackagePath": "staticwebassets\\img\\car.png"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\customer.png",
+      "PackagePath": "staticwebassets\\img\\customer.png"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\login2.png",
+      "PackagePath": "staticwebassets\\img\\login2.png"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\img\\nissangtrSelect3.jpg",
+      "PackagePath": "staticwebassets\\img\\nissangtrSelect3.jpg"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\лаб по csharp\\OnlineRentCar\\OnlineRentCar\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.OnlineRentCar.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.OnlineRentCar.props",
+      "PackagePath": "build\\OnlineRentCar.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.OnlineRentCar.props",
+      "PackagePath": "buildMultiTargeting\\OnlineRentCar.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.OnlineRentCar.props",
+      "PackagePath": "buildTransitive\\OnlineRentCar.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

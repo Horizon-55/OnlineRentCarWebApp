@@ -1,0 +1,200 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "Машини";
+    var MyData = (IEnumerable<Car>)ViewData["FromDbObj"];
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Домашня сторінка</a>
+                    <a class="nav-link" asp-controller="ControlerCars" asp-action="Cars">Автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerCustoners" asp-action="Customers">Клієнти</a>
+                    <a class="nav-link" asp-controller="ControllerRents" asp-action="Rents">Оренда</a>
+                    <a class="nav-link" asp-controller="ControllerReturns" asp-action="Returns">Повернення</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col">
+                        <h3 class="text-danger pl-4">Керування автомобілями</h3>
+                        <img src="/img/car.jpg">
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <form method="post">
+                            <div class="mb-3">
+                                <label for="LNumberTb" asp-for="LNumberTb" class="form-label">Ліцензіоннний номер</label>
+                                <input type="text" asp-for="LNumberTb" class="form-control" name="LNumberTb" placeholder="Введіть ліцензіонний номер" style="width:500px">
+                                <span asp-validation-for="LNumberTb" class="text-danger"></span>
+                            </div>
+                             
+                            <div class="mb-3">
+                                <label for="BrandTb" asp-for="BrandTb" class="form-label">Бренд</label>
+                                <input type="text" asp-for="BrandTb" class="form-control" name="BrandTb" placeholder="Введіть Бренд автомобіля" style="width:500px">
+                                <span asp-validation-for="BrandTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ModelTb" asp-for="ModelTb" class="form-label">Модель</label>
+                                <input type="text" asp-for="ModelTb" class="form-control" name="ModelTb" placeholder="Введіть Модель автомобіля" style="width:500px">
+                                <span asp-validation-for="ModelTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="ColorTb" asp-for="ColorTb" class="form-label">Колір</label>
+                                <input type="text" asp-for="ColorTb" class="form-control" name="ColorTb" placeholder="Введіть колір автомобіля" style="width:500px">
+                                <span asp-validation-for="ColorTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="NumberOfPassagers" asp-for="NumberOfPassagerCarsTb" class="form-label">Кількість пасажирів</label>
+                                <input type="text" asp-for="NumberOfPassagerCarsTb" class="form-control" name="NumberOfPassager" placeholder="Введіть Кількість пасажирів" style="width:500px">
+                                <span asp-validation-for="NumberOfPassagerCarsTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="TypeTb" asp-for="TypeGearBoxTb" class="form-label">Тип коробки передач</label>
+                                <select class="form-select" asp-for="TypeGearBoxTb" name="TypeGearBoxTb" style="width:500px">
+                                    <option></option>
+                                    <option>Механіка</option>
+                                    <option>Автомат</option>
+                                </select>
+                                <span asp-validation-for="TypeGearBoxTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="TypeOfFuel" asp-for="TypeOfFuelTb" class="form-label">Вид топлива</label>
+                                <select class="form-select" asp-for="TypeOfFuelTb" name="TypeOfFuelTb" style="width:500px">
+                                    <option></option>
+                                    <option>Бензин</option>
+                                    <option>Дизель</option>
+                                    <option>Гибрид</option>
+                                    <option>Електрика</option>
+                                </select>
+                                <span asp-validation-for="TypeOfFuelTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="EngineCapacity" asp-for="EngineCapalityTb" class="form-label">Об'єм двигуна</label>
+                                <input type="text" asp-for="EngineCapalityTb" class="form-control" name="EngineCapalityTb" placeholder="Введіть Об'єм двигуна автомобіля" style="width:500px">
+                                <span asp-validation-for="EngineCapalityTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Machinebodytype" asp-for="MachinebodyTypeTb" class="form-label">Тип машини</label>
+                                <input type="text" asp-for="MachinebodyTypeTb" class="form-control" name="MachinebodyTypeTb" placeholder="Введіть Тип автомобіля" style="width:500px">
+                                <span asp-validation-for="MachinebodyTypeTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="GhostType" asp-for="GhostTypeTb" class="form-label">Тип привида</label>
+                                <input type="text" asp-for="GhostTypeTb" class="form-control" name="GhostTypeTb" placeholder="Введіть Тип привида автомобіля" style="width:500px">
+                                <span asp-validation-for="GhostTypeTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="StatusAuto" asp-for="StatusTb" class="form-label">Статус Автомобіля</label>
+                                <select class="form-select" asp-for="StatusTb" name="StatusTb" style="width:500px" runat="server">
+                                    <option></option>
+                                    <option>Доступний</option>
+                                    <option>Заброньований</option>
+                                </select>
+                                <span asp-validation-for="StatusTb" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="PriceTb" asp-for="PriceTb" class="form-label">Ціна</label>
+                                <input type="text" asp-for="PriceTb" class="form-control" name="PriceTb" placeholder="Введіть ціну" style="width:500px">
+                                <span asp-validation-for="PriceTb" class="text-danger"></span>
+                            </div>
+                            <button type="submit" id="AddBtn" class="btn btn-danger">Добавити</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          <div class="col-md-8">
+               <h1>Список машин</h1>
+                    <table class="table table-bordered table-striped" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Ліцензійний номер автомобіля</th>
+                                    <th>Бренд</th>
+                                    <th>Модель</th>
+                                    <th>Колір</th>
+                                    <th>Кількість пасажирів</th>
+                                    <th>Тип коробки передач</th>
+                                    <th>Вид топлива</th>
+                                    <th>Об'єм двигуна</th>
+                                    <th>Тип машини</th>
+                                    <th>Тип привида</th>
+                                    <th>Статус Автомобіля</th>
+                                    <th>Ціна</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        @if (MyData != null)
+                        {
+                            @foreach (var obj in MyData)
+                            {
+                                <tr>
+                                    <td width="30%">
+                                        <button type="button" class="btn btn-outline-warning">
+                                            <a asp-controller="ControlerCars" asp-action="CarsEdit" asp-route-LNumberTb="@obj.LNumberTb" style="text-decoration:none">Редагувати</a>
+                                        </button>
+                                        <button type="button" class="btn btn-outline-danger">
+                                            <a asp-controller="ControlerCars" asp-action="CarsDelete" asp-route-LNumberTb="@obj.LNumberTb" style="text-decoration:none">Вилучити</a>
+                                        </button>
+                                    </td>
+                                    <td width="30%">
+                                        @obj.LNumberTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.BrandTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.ModelTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.ColorTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.NumberOfPassagerCarsTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.TypeGearBoxTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.TypeOfFuelTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.EngineCapalityTb
+                                    </td>
+                                    <th width="30%">
+                                        @obj.MachinebodyTypeTb
+                                    </th>
+                                    <td width="30%">
+                                        @obj.GhostTypeTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.StatusTb
+                                    </td>
+                                    <td width="30%">
+                                        @obj.PriceTb
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                    </table>
+             </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>

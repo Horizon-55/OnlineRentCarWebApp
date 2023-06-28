@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Адмін панелька домашня";
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" asp-controller="ControllerMainAdminPanel" asp-action="MainAdminPanel">Домашня сторінка</a>
+                    <a class="nav-link" asp-controller="ControlerCars" asp-action="Cars">Автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerCustoners" asp-action="Customers">Клієнти</a>
+                    <a class="nav-link" asp-controller="ControllerRents" asp-action="Rents">Оренда</a>
+                    <a class="nav-link" asp-controller="ControllerReturns" asp-action="Returns">Повернення</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 ml-5">
+        <div class="row">
+            <div class="jumbotron bg-primary">
+                <div class="container">
+                    <h1 class="display-4">Панель адміністратора системи управління прокатом автомобілів</h1>
+                    <p class="lead">Адмін може керувати автомобілями, Клієнтами, та зробити повернення автомобілів</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6"><div><img src="/img/VWPassat1.jpg" alt="VWPassat" height="300px" width="400px" /></div><div><h6 class="text-danger">Volkswagen Passat Universal</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/Porsche911select2.jpg" alt="Porshe911" height="300px" width="400px" /></div><div><h6 class="text-danger">Porsche 911 Sport Car</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/nissangtrSelect3.jpg" alt="NissanGTR" height="300px" width="400px" /></div><div><h6 class="text-danger">Nissan GTR Sport Car</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/SkodaOctaviaA8Select4.jpg" alt="SkodaOctaviaA8" height="300px" width="400px" /></div><div><h6 class="text-danger">SkodaOctaviaA8</h6></div></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6"><div><img src="/img/SeatIbizaSelect5.jpg" alt="SeatIbizaCar" height="300px" width="400px" /></div><div><h6 class="text-danger">Seat Ibiza Car Sedan</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/VolvoV40Select6.jpg" alt="VolvoV40Car" height="300px" width="400px" /></div><div><h6 class="text-danger">Volvo V40 Car Universal</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/MitsubishiOutlanderSelect7.jpg" alt="MitsubishiOutlanderCar" height="300px" width="400px" /></div><div><h6 class="text-danger">Mitsubishi Outlander</h6></div></div>
+            <div class="col-lg-3 col-md-6"><div><img src="/img/ToyotaCorollaSelect8.jpg" alt="ToyotaCorolla" height="300px" width="400px" /></div><div><h6 class="text-danger">Toyota Corolla</h6></div></div>
+        </div>
+    </div>
+</body>

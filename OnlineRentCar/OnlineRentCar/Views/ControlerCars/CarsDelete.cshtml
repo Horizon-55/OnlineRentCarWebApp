@@ -1,0 +1,90 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "EditСars";
+}
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Car Rent 1.0</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<body>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="container">
+            <form method="post" asp-action="DeletePostCars">
+                <div class="border p-3 mt-4">
+                    <div class="row pb-2">
+                        <h2 class="text-primary">Видалення Автомобілей</h2>
+                        <hr />
+                        <input asp-for="LNumberTb" class="form-control" name="LNumberTb" hidden/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="BrandTb" asp-for="BrandTb" class="form-label">Бренд</label>
+                        <input type="text" asp-for="BrandTb" disabled class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ModelTb" asp-for="ModelTb" class="form-label">Модель</label>
+                        <input type="text" disabled asp-for="ModelTb" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="ColorTb" asp-for="ColorTb" class="form-label">Колір</label>
+                        <input type="text" disabled asp-for="ColorTb" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="NumberOfPassagers" asp-for="NumberOfPassagerCarsTb" class="form-label">Кількість пасажирів</label>
+                        <input type="text" disabled asp-for="NumberOfPassagerCarsTb" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeTb" asp-for="TypeGearBoxTb" class="form-label">Тип коробки передач</label>
+                        <select class="form-select" disabled asp-for="TypeGearBoxTb">
+                            <option></option>
+                            <option>Механіка</option>
+                            <option>Автомат</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="TypeOfFuel" asp-for="TypeOfFuelTb" class="form-label">Вид топлива</label>
+                        <select class="form-select" disabled asp-for="TypeOfFuelTb">
+                            <option></option>
+                            <option>Бензин</option>
+                            <option>Дизель</option>
+                            <option>Гибрид</option>
+                            <option>Електрика</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="EngineCapacity" asp-for="EngineCapalityTb" class="form-label">Об'єм двигуна</label>
+                        <input type="text" asp-for="EngineCapalityTb" disabled class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="Machinebodytype" asp-for="MachinebodyTypeTb" class="form-label">Тип машини</label>
+                        <input type="text" asp-for="MachinebodyTypeTb" disabled class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="GhostType" asp-for="GhostTypeTb" class="form-label">Тип привида</label>
+                        <input type="text" asp-for="GhostTypeTb" disabled class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="StatusAuto" asp-for="StatusTb" class="form-label">Статус Автомобіля</label>
+                        <select class="form-select" disabled asp-for="StatusTb">
+                            <option></option>
+                            <option>Доступний</option>
+                            <option>Заброньований</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="PriceTb" asp-for="PriceTb" class="form-label">Ціна</label>
+                        <input type="text" asp-for="PriceTb" disabled class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-outline-danger">Видалити</button>
+                    <button type="button" class="btn btn-outline-info"><a asp-controller="ControlerCars" asp-action="Cars" style="text-decoration:none">Повернутися на головну</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+

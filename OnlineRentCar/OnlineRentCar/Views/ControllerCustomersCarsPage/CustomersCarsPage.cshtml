@@ -1,0 +1,124 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "Сторінка клієнтів";
+    var MyData = (IEnumerable<Car>)ViewData["FromDbObj"];
+    var ClientName = ViewData["NameClient"];
+}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Car Rent 1.0</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" asp-controller="ControllerCustomersCarsPage" asp-action="CustomersCarsPage" asp-route-data="@ClientName">Машини</a>
+                    <a class="nav-link" asp-controller="ControllerCustomersCarsPage" asp-action="CustomersPendingRentals" asp-route-Name="@ClientName">Орендовані автомобілі</a>
+                    <a class="nav-link" asp-controller="ControllerLogin" asp-action="LoginPage">Вийти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <label id="CustomerName">@ClientName</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 ml-5"><img src="~/img/Login1.png" height="400px" /></div>
+            <div class="col-md-4">
+
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col"> 
+                <form>
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-8"><h3 class="text-warning">Доступні машини</h3></div>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Ліцензійний номер автомобіля</th>
+                                    <th>Бренд</th>
+                                    <th>Модель</th>
+                                    <th>Колір</th>
+                                    <th>Кількість пасажирів</th>
+                                    <th>Тип коробки передач</th>
+                                    <th>Вид топлива</th>
+                                    <th>Об'єм двигуна</th>
+                                    <th>Тип машини</th>
+                                    <th>Тип привида</th>
+                                    <th>Статус Автомобіля</th>
+                                    <th>Ціна</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (MyData != null)
+                                {
+                                    @foreach (var obj in MyData)
+                                    {
+                                        if (obj.StatusTb != "Заброньований")
+                                        {
+                                            <tr>
+                                                <td width="30%">
+                                                    <button type="button" class="btn btn-outline-warning">
+                                                        <a asp-controller="ControllerCustomersCarsPage" asp-action="SelectedBookCars" asp-route-LNumberTb="@obj.LNumberTb" asp-route-Name="@ClientName" style="text-decoration:none">Вибрати</a>
+                                                    </button>
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.LNumberTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.BrandTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.ModelTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.ColorTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.NumberOfPassagerCarsTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.TypeGearBoxTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.TypeOfFuelTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.EngineCapalityTb
+                                                </td>
+                                                <th width="30%">
+                                                    @obj.MachinebodyTypeTb
+                                                </th>
+                                                <td width="30%">
+                                                    @obj.GhostTypeTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.StatusTb
+                                                </td>
+                                                <td width="30%">
+                                                    @obj.PriceTb
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div> 
+    </div>
+  </div>
+</body>
