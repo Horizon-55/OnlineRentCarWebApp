@@ -41,6 +41,7 @@ namespace OnlineRentCar.Controllers
                 {
                     var IfLastRentIdNull = 0;
                     var CheckIdReturn = _Database.ReturnsCars.OrderBy(x => x.RentId).LastOrDefault();
+                    var GetCustomerName = _Database.Users.SingleOrDefault(u => u.Id == IdCustomer);
                     if (CheckIdReturn == null)
                     {
                         IfLastRentIdNull++;
@@ -49,6 +50,7 @@ namespace OnlineRentCar.Controllers
                             RentId = IfLastRentIdNull,
                             Car = LNumberTb,
                             User = IdCustomer,
+                            UserName = GetCustomerName.СustomerFullNameTb,
                             Date = ReturnTimeCust,
                             Delay = DelayTb,
                             Fine = FineTb
@@ -63,6 +65,7 @@ namespace OnlineRentCar.Controllers
                             RentId = CheckIdReturn.RentId + 1,
                             Car = LNumberTb,
                             User = IdCustomer,
+                            UserName = GetCustomerName.СustomerFullNameTb,
                             Date = ReturnTimeCust,
                             Delay = DelayTb,
                             Fine = FineTb
@@ -83,6 +86,7 @@ namespace OnlineRentCar.Controllers
                         RentId = RentIdTb,
                         Car = LNumberTb,
                         User = IdCustomer,
+                        UserName = GetCustomerName.СustomerFullNameTb,
                         RentTime = RentTimeCust,
                         ReturnDate = ReturnTimeCust,
                         Fees = Convert.ToInt32(FeesCustTb)

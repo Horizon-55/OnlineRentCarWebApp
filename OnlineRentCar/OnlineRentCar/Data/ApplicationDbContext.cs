@@ -25,6 +25,8 @@ namespace OnlineRentCar.Data
         public DbSet<AdminData> admindata {get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().HasKey(u => new { u.Id}).HasName("IdUser");
+
             modelBuilder.Entity<Car>().HasOne(e => e.Rent).WithOne(b => b.Cars).HasForeignKey<Rent>(a => a.Car);
             modelBuilder.Entity<Rent>().HasOne(e => e.Users).WithMany(b => b.Rent).HasForeignKey(a => a.User);
             modelBuilder.Entity<Car>().HasOne(e => e.Returns).WithOne(c => c.Cars).HasForeignKey<Returns>(b => b.Car);

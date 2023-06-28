@@ -118,6 +118,10 @@ namespace OnlineRentCar.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("RentId");
 
                     b.HasIndex("Car")
@@ -149,6 +153,10 @@ namespace OnlineRentCar.Migrations
                     b.Property<string>("User")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("RentId");
 
@@ -185,7 +193,8 @@ namespace OnlineRentCar.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id")
+                        .HasName("IdUser");
 
                     b.ToTable("Users");
                 });

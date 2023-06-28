@@ -71,7 +71,8 @@ namespace OnlineRentCar.Controllers
                     {
                         RentId = IfLastRentIdNull,
                         Car = LNumberTb,
-                        User = ChangeToIdNameClient,
+                        User = ChangeToIdNameClient, //тут id
+                        UserName = SelectUserDb.СustomerFullNameTb,
                         RentTime = (DateTimeOffset)DateRentBook,
                         ReturnDate = (DateTimeOffset)DateReturnBook,
                         Fees = Fees,
@@ -87,6 +88,7 @@ namespace OnlineRentCar.Controllers
                         RentId = LastRentId.RentId + 1,
                         Car = LNumberTb,
                         User = ChangeToIdNameClient,
+                        UserName = SelectUserDb.СustomerFullNameTb,
                         RentTime = (DateTimeOffset)DateRentBook,
                         ReturnDate = (DateTimeOffset)DateReturnBook,
                         Fees = Fees,

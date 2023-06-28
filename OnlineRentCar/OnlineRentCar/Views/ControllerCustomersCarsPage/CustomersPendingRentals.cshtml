@@ -32,9 +32,8 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>Id Оренди</th>
                             <th>Ліцензійні номера автомобіля</th>
-                            <th>Id Користувача</th>
+                            <th>Ім'я Користувача</th>
                             <th>Дата взяття</th>
                             <th>Дата повернення</th>
                             <th>Плата</th>
@@ -45,13 +44,10 @@
                         {
                             <tr>
                                 <td width="30%">
-                                    @obj.RentId
-                                </td>
-                                <td width="30%">
                                     @obj.Car
                                 </td>
                                 <td width="30%">
-                                    @obj.User
+                                    @obj.UserName
                                 </td>
                                 <td width="30%">
                                     @obj.RentTime

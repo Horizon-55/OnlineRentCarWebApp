@@ -14,10 +14,11 @@ namespace OnlineRentCar.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RentId { get; set; }
         [Required]
-        [ForeignKey("Car")]
+        [ForeignKey("LNumberCar")]
         public string Car { get; set; } //зовнішній ключ до car а саме lmNumber
-        [ForeignKey("User")]
+        [ForeignKey("UserId")]
         public string User { get; set; } //зовнішній ключ до User а саме до первнинного ключа
+        public string UserName { get; set; } // для відображенння таблиці клієнта
         [Required(ErrorMessage = "Оберіть дату початку оренди!")]
         public DateTimeOffset RentTime { get; set; }
         [Required(ErrorMessage = "Оберіть дату завершення оренди!")]
@@ -29,14 +30,14 @@ namespace OnlineRentCar.Models
         {
 
         }
-        public Rent (string _Car, string _User, DateTimeOffset _RentTime, DateTimeOffset _ReturnDate, int _fees)
+        public Rent (string _Car, string _User, DateTimeOffset _RentTime, DateTimeOffset _ReturnDate, int _fees, string _UserName)
         {
             Car = _Car;
             User = _User;
             RentTime = _RentTime;
             ReturnDate = _ReturnDate;
             Fees = _fees;
-
+            UserName = _UserName;
         }
     }
 }

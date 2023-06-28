@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineRentCar.Models
 {
@@ -17,7 +18,7 @@ namespace OnlineRentCar.Models
         [Required(ErrorMessage = "Створення логіну обов'язкове для введення!")]
         public string CreateLoginTb { get; set; }
         public ICollection <Rent> Rent;
-        public ICollection<Returns> Returns; 
+        public ICollection<Returns> Returns;
         public User()
         {
             
