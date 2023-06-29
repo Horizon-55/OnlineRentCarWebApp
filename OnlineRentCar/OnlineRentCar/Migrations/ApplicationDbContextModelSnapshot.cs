@@ -114,9 +114,8 @@ namespace OnlineRentCar.Migrations
                     b.Property<DateTimeOffset>("ReturnDate")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("User")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("User")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -150,9 +149,8 @@ namespace OnlineRentCar.Migrations
                     b.Property<int>("Fine")
                         .HasColumnType("int");
 
-                    b.Property<string>("User")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("User")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .IsRequired()
@@ -170,8 +168,11 @@ namespace OnlineRentCar.Migrations
 
             modelBuilder.Entity("OnlineRentCar.Models.User", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreateLoginTb")
                         .IsRequired()

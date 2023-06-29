@@ -12,7 +12,7 @@ namespace OnlineRentCar.Models
         [ForeignKey("LNumberCar")]
         public string Car { get; set; }
         [ForeignKey("UserId")]
-        public string User { get; set; }
+        public int User { get; set; }
         public string UserName { get; set; }
         public DateTimeOffset Date {get; set; } 
         public int Delay { get; set; }
@@ -23,7 +23,7 @@ namespace OnlineRentCar.Models
         {
             
         }
-        public Returns(string _Car, string _User, string _UserName, DateTimeOffset _Date, int _Delay, int _Fine)
+        public Returns(string _Car, int _User, string _UserName, DateTimeOffset _Date, int _Delay, int _Fine)
         {
             Car = _Car;
             User = _User;

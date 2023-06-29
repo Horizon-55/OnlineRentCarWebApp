@@ -17,7 +17,7 @@ namespace OnlineRentCar.Models
         [ForeignKey("LNumberCar")]
         public string Car { get; set; } //зовнішній ключ до car а саме lmNumber
         [ForeignKey("UserId")]
-        public string User { get; set; } //зовнішній ключ до User а саме до первнинного ключа
+        public int User { get; set; } //зовнішній ключ до User а саме до первнинного ключа
         public string UserName { get; set; } // для відображенння таблиці клієнта
         [Required(ErrorMessage = "Оберіть дату початку оренди!")]
         public DateTimeOffset RentTime { get; set; }
@@ -30,7 +30,7 @@ namespace OnlineRentCar.Models
         {
 
         }
-        public Rent (string _Car, string _User, DateTimeOffset _RentTime, DateTimeOffset _ReturnDate, int _fees, string _UserName)
+        public Rent (string _Car, int _User, DateTimeOffset _RentTime, DateTimeOffset _ReturnDate, int _fees, string _UserName)
         {
             Car = _Car;
             User = _User;

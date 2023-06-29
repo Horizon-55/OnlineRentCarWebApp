@@ -35,7 +35,7 @@ namespace OnlineRentCar.Controllers
         //Post
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteRent(int RentIdTb, string LNumberTb, string IdCustomer, DateTimeOffset RentTimeCust, DateTimeOffset ReturnTimeCust, string FeesCustTb, int DelayTb, int FineTb)
+        public IActionResult DeleteRent(int RentIdTb, string LNumberTb, int IdCustomer, DateTimeOffset RentTimeCust, DateTimeOffset ReturnTimeCust, string FeesCustTb, int DelayTb, int FineTb)
         {
                 if (RentIdTb != null && IdCustomer != null)
                 {
