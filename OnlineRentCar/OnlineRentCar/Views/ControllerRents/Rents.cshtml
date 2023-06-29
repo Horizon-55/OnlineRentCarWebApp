@@ -22,62 +22,65 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row justify-content-center d-flex">
+            <div class="col-xl-4">
                 <div class="row">
-                    <div class="col-5"></div>
-                    <div class="col-5">
-                        <h3 class="text-danger text-md-start">Орендовані автомобілі</h3>
-                        <img src="/img/car 128px.png" height="130px">
+                    <div class="col-md-5 d-flex align-items-center justify-content-center">
+                        <div class="text-center">
+                            <h3 class="text-danger">Орендовані автомобілі</h3>
+                            <img src="/img/car 128px.png" style="width:50%; height:50%">
+                        </div>
                     </div>
-                    <div class="col"></div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-9">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Id Оренди Авто</th>
-                                    <th>Ліцензійні номера автомобіля</th>
-                                    <th>Клієнт</th>
-                                    <th>Дата взяття</th>
-                                    <th>Дата повернення</th>
-                                    <th>Оплата</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var obj in RentListAll)
-                                {
+                    <div class="col-xl-8">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped w-100%">
+                                <thead>
                                     <tr>
-                                        <td width="30%">
-                                            <button type="button" class="btn btn-outline-warning">
-                                                <a asp-controller="ControllerRents" asp-action="SubmitRentReturns" asp-route-RentId="@obj.RentId" style="text-decoration:none">Повернути</a>
-                                            </button>
-                                        </td>
-                                        <td width="30%">
-                                            @obj.RentId;
-                                        </td>
-                                        <td width="30%">
-                                            @obj.Car
-                                        </td>
-                                        <td width="30%">
-                                            @obj.User
-                                        </td>
-                                        <td width="30%">
-                                            @obj.RentTime
-                                        </td>
-                                        <td width="30%">
-                                            @obj.ReturnDate
-                                        </td>
-                                        <td width="30%">
-                                            @obj.Fees
-                                        </td>
+                                        <th></th>
+                                        <th>Id Оренди Авто</th>
+                                        <th>Ліцензійні номера автомобіля</th>
+                                        <th>Клієнт</th>
+                                        <th>Дата взяття</th>
+                                        <th>Дата повернення</th>
+                                        <th>Оплата</th>
                                     </tr>
-                                }
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach (var obj in RentListAll)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-grid gap-2">
+                                                    <button type="button" class="btn btn-outline-warning">
+                                                        <a asp-controller="ControllerRents" asp-action="SubmitRentReturns" asp-route-RentId="@obj.RentId" style="text-decoration:none">Повернути</a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                @obj.RentId;
+                                            </td>
+                                            <td>
+                                                @obj.Car
+                                            </td>
+                                            <td>
+                                                @obj.User
+                                            </td>
+                                            <td>
+                                                @obj.RentTime
+                                            </td>
+                                            <td>
+                                                @obj.ReturnDate
+                                            </td>
+                                            <td>
+                                                @obj.Fees
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
