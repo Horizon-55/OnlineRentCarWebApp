@@ -22,52 +22,54 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-5"></div>
-            <div class="col-md-3"><img src="/img/car.png" height="180px">
-                <h1 class="text-warning">Повернуті Автомобілі</h1>    
-            </div>
-            <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <table class="table table-bordered table-striped" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Номер авто</th>
-                            <th>Ім'я Користувача</th>
-                            <th>Дата повернення</th>
-                            <th>Затримки після оренди в к-сть днях</th>
-                            <th>Комісії</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (GetData != null)
-                        {
-                            @foreach (var obj in GetData)
-                            {
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xxl-8">
+                <h1 class="text-warning text-center">Повернуті Автомобілі</h1>
+                <div class="d-flex justify-content-center">
+                    <img src="/img/car.png" style="width:12%; height:12%">
+                </div>
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped w-100">
+                            <thead>
                                 <tr>
-                                    <td width="30%">
-                                        @obj.Car
-                                    </td>
-                                    <td width="30%">
-                                        @obj.UserName
-                                    </td>
-                                    <td width="30%">
-                                        @obj.Date
-                                    </td>
-                                    <td width="30%">
-                                        @obj.Delay
-                                    </td>
-                                    <td width="30%">
-                                        @obj.Fine
-                                    </td>
+                                    <th>Номер авто</th>
+                                    <th>Ім'я Користувача</th>
+                                    <th>Дата повернення</th>
+                                    <th>Затримки після оренди в к-сть днях</th>
+                                    <th>Комісії</th>
                                 </tr>
-                            }
-                        }
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                @if (GetData != null)
+                                {
+                                    @foreach (var obj in GetData)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @obj.Car
+                                            </td>
+                                            <td>
+                                                @obj.UserName
+                                            </td>
+                                            <td>
+                                                @obj.Date
+                                            </td>
+                                            <td>
+                                                @obj.Delay
+                                            </td>
+                                            <td>
+                                                @obj.Fine
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
