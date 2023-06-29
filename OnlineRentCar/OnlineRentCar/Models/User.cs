@@ -6,7 +6,7 @@ namespace OnlineRentCar.Models
     public class User
     {
         [Key]
-        public int Id {get; set;}
+        public int Id { get; set; }
         [Required(ErrorMessage = "ПІБ обов'язковий для введення!")]
         public string СustomerFullNameTb { get; set; }
         [Required(ErrorMessage = "Адреса клієнта обов'язкове для введення!")]

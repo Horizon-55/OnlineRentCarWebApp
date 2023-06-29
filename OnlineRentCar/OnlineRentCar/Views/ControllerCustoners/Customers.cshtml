@@ -36,27 +36,27 @@
                         <form method="post">
                             <div class="mb-3">
                                 <label for="FullNameCustomer" asp-for="СustomerFullNameTb" class="form-label">ПІБ користувача</label>
-                                <input type="text" asp-for="СustomerFullNameTb" class="form-control"  placeholder="Введіть Ім'я користувача">
+                                <input type="text" asp-for="СustomerFullNameTb" class="form-control" name="FullName" placeholder="Введіть Ім'я користувача">
                                 <span asp-validation-for="СustomerFullNameTb" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="AddreessCustomer" asp-for="_AddreessTb" class="form-label">Адреса користувача</label>
-                                <input type="text" asp-for="_AddreessTb" class="form-control"  placeholder="Введіть Адресу користувача">
+                                <input type="text" asp-for="_AddreessTb" class="form-control" name="AddressCust" placeholder="Введіть Адресу користувача">
                                 <span asp-validation-for="_AddreessTb" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="FullNumberPhone" asp-for="PhoneCustomerTb" class="form-label">Номер телефону користувача</label>
-                                <input type="text" asp-for="PhoneCustomerTb" class="form-control"  placeholder="Введіть Номер телефону користувача">
+                                <input type="text" asp-for="PhoneCustomerTb" class="form-control" name="PhoneNumber" placeholder="Введіть Номер телефону користувача">
                                 <span asp-validation-for="PhoneCustomerTb" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="CreateLoginCustomer" asp-for="CreateLoginTb" class="form-label">Створити логін користувача</label>
-                                <input type="text"asp-for="CreateLoginTb" class="form-control"  placeholder="Створіть логін користувача">
+                                <input type="text" asp-for="CreateLoginTb" class="form-control" name="CreateLoginCust" placeholder="Створіть логін користувача">
                                 <span asp-validation-for="CreateLoginTb" class="text-danger"></span>
                             </div>
                             <div class="mb-3">
                                 <label for="CreatePasswordCustomer" asp-for="CreatePasswordTb" class="form-label">Створити Пароль користувача</label>
-                                <input type="text" asp-for="CreatePasswordTb" class="form-control"  placeholder="Створіть пароль користувача">
+                                <input type="text" asp-for="CreatePasswordTb" class="form-control" name="CreatePass" placeholder="Створіть пароль користувача">
                                 <span asp-validation-for="CreatePasswordTb" class="text-danger"></span>
                             </div>
                             <button type="submit" class="btn btn-danger">Додати</button>

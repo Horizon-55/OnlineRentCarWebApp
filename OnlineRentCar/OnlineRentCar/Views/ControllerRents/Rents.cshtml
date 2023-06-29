@@ -37,8 +37,7 @@
                             <table class="table table-bordered table-striped w-100">
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th>Id Оренди Авто</th>
+                                        <th></th>>
                                         <th>Ліцензійні номера автомобіля</th>
                                         <th>Клієнт</th>
                                         <th>Дата взяття</th>
@@ -56,9 +55,6 @@
                                                         <a asp-controller="ControllerRents" asp-action="SubmitRentReturns" asp-route-RentId="@obj.RentId" style="text-decoration:none">Повернути</a>
                                                     </button>
                                                 </div>
-                                            </td>
-                                            <td>
-                                                @obj.RentId;
                                             </td>
                                             <td>
                                                 @obj.Car
