@@ -71,7 +71,6 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>Id користувача</th>
                                         <th>ПІБ користувача</th>
                                         <th>Адреса користувача</th>
                                         <th>Номер телефону користувача</th>
@@ -94,9 +93,6 @@
                                                             <a asp-controller="ControllerCustoners" asp-action="CustomersDelete" asp-route-id="@obj.Id" style="text-decoration:none">Вилучити</a>
                                                         </button>
                                                     </div>
-                                                </td>
-                                                <td>
-                                                    @obj.Id
                                                 </td>
                                                 <td>
                                                     @obj.СustomerFullNameTb
