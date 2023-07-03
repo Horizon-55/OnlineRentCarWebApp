@@ -19,14 +19,11 @@
                         <h2 class="text-primary">Повернення орендованого автомобіля</h2>
                         <hr />
                         <input asp-for="RentId" class="form-control" name="RentIdTb" hidden />
+                        <input type="text" readonly hidden name="IdCustomer" asp-for="User" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="BrandTb" asp-for="Car" class="form-label">Ліцензійний номер автомобіля</label>
                         <input type="text" asp-for="Car" name="LNumberTb" readonly class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="ModelTb" asp-for="User" class="form-label">Id номер користувача</label>
-                        <input type="text" readonly name="IdCustomer" asp-for="User" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label for="ColorTb" asp-for="RentTime" class="form-label">Дата оренди</label>
